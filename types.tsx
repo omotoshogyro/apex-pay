@@ -18,6 +18,8 @@ export type RootStackParamList = {
   Onboarding: undefined;
   Signin: undefined;
   Signup: undefined;
+  HomeNavigator: undefined;
+  GiftCard:undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = StackScreenProps<

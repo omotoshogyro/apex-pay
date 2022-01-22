@@ -123,7 +123,7 @@ const Onboarding = ({ navigation }: OnboardingScreenNavigationProps) => {
                 });
                 // console.log("Right index", currentIndex);
               } else {
-                navigation.replace("Signup");
+                navigation.replace("HomeNavigator");
               }
             }}
           >
