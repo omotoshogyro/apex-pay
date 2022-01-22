@@ -5,7 +5,7 @@ const Wallet = () => {
     return (
         <ImageBackground source={require("../../assets/images/pattern.png")} style={styles.container}>
             <Text style={styles.balance}>Wallet Balance</Text>
-            <Text style={styles.amount}>$0</Text>
+            <Text style={styles.amount}>₦0</Text>
             <ImageBackground style={{height: 44, width: 282, alignItems:"center"}} source={require("../../assets/images/textBack.png")}>
                 <Text style={styles.withdraw}>Withdraw</Text>
             </ImageBackground>
