@@ -44,6 +44,7 @@ const LaststageData = () => {
 const Onboarding = ({ navigation }: OnboardingScreenNavigationProps) => {
   const scrollX = useRef<any>(new Animated.Value(0)).current;
   const flatListRef = useRef<FlatList>(null);
+  // const current = Math.ceil(Number(scrollX._value / SIZES.width));
 
   const [viewIndex, setViewIndex] = useState<number>(0);
 
@@ -71,7 +72,7 @@ const Onboarding = ({ navigation }: OnboardingScreenNavigationProps) => {
           marginRight: 20,
           alignItems: "flex-end",
         }}
-        onPress={() => navigation.navigate("Signup")}
+        onPress={() => navigation.navigate("Onboardingend")}
       >
         <Text style={{ ...FONTS.regular, color: COLORS.grey3 }}>Skip</Text>
       </TouchableOpacity>
@@ -100,40 +101,32 @@ const Onboarding = ({ navigation }: OnboardingScreenNavigationProps) => {
           alignItems: "center",
         }}
       >
-        {viewIndex < 4 ? (
-          <TouchableOpacity
-            activeOpacity={0.6}
-            style={{
-              backgroundColor: COLORS.green1,
-              height: 95,
-              width: 95,
-              justifyContent: "center",
-              alignItems: "center",
-              borderRadius: 95,
-            }}
-            onPress={() => {
-              let currentIndex = Math.ceil(
-                Number(scrollX._value / SIZES.width)
-              );
-              if (currentIndex < onboardingdatas.length - 1) {
-                // Scroll to the next item
-                flatListRef?.current?.scrollToIndex({
-                  index: currentIndex + 1,
-                  animated: true,
-                });
-                // console.log("Right index", currentIndex);
-              } else {
-                navigation.replace("HomeNavigator");
-              }
-            }}
-          >
-            <Arrowright />
-          </TouchableOpacity>
-        ) : (
-          <View>
-            <Text>Hello</Text>
-          </View>
-        )}
+        <TouchableOpacity
+          activeOpacity={0.6}
+          style={{
+            backgroundColor: COLORS.green1,
+            height: 95,
+            width: 95,
+            justifyContent: "center",
+            alignItems: "center",
+            borderRadius: 95,
+          }}
+          onPress={() => {
+            let currentIndex = Math.ceil(Number(scrollX._value / SIZES.width));
+            if (currentIndex < onboardingdatas.length - 1) {
+              // Scroll to the next item
+              flatListRef?.current?.scrollToIndex({
+                index: currentIndex + 1,
+                animated: true,
+              });
+              // console.log("Right index", currentIndex);
+            } else {
+              navigation.replace("Onboardingend");
+            }
+          }}
+        >
+          <Arrowright />
+        </TouchableOpacity>
       </View>
     </View>
   );

@@ -4,7 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { RootStackParamList } from "../types";
-import { Onboarding, Signin, Signup, Home, Transactions } from "../screens";
+import { Onboarding, Signin, Signup, Home, Onboardingend, Transactions } from "../screens";
 import { Text } from "react-native-svg";
 import HomeIcon from "../assets/icons/Home";
 import WalletIcon from "../assets/icons/WalletIcon";
@@ -16,7 +16,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 const Tab =  createBottomTabNavigator();
 
 const TabNavigator = () => (
-  <Tab.Navigator initialRouteName="Transaction" screenOptions={{tabBarShowLabel:false, headerShown: false, tabBarStyle:{height: 70}}} >
+  <Tab.Navigator screenOptions={{tabBarShowLabel:false, headerShown: false, tabBarStyle:{height: 70}}} >
     <Tab.Screen name="Home" options={{tabBarIcon:({focused})=>{return <HomeIcon focused={focused} />}}} component={Home}/>
     <Tab.Screen name="Wallet" options={{tabBarIcon:({focused})=>{return <WalletIcon focused={focused} />}}} component={Home}/>
     <Tab.Screen name="Transaction" options={{tabBarIcon:({focused})=>{return <TransactionIcon focused={focused} />}}} component={Transactions}/>
@@ -28,9 +28,10 @@ const RootNavigator = () => (
     screenOptions={{
       headerShown: false,
     }}
-    initialRouteName="HomeNavigator"
+    initialRouteName="Onboarding"
   >
     <Stack.Screen name="Onboarding" component={Onboarding} />
+    <Stack.Screen name="Onboardingend" component={Onboardingend} />
     <Stack.Screen name="Signup" component={Signup} />
     <Stack.Screen name="Signin" component={Signin} />
     <Stack.Screen name="HomeNavigator" component={TabNavigator} />

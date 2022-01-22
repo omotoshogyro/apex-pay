@@ -1,3 +1,7 @@
+// import Onboardingstage from "./Onboardingstage/Onboardingstage";
+
+// export {
+//     Onboardingstage,
 import Onboardingstage from "./Onboardingstage/Onboardingstage"
 import Actions from "./HomeComponents/Actions"
 import Wallet from "./HomeComponents/Wallet"
