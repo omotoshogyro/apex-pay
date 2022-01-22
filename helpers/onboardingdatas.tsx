@@ -28,10 +28,11 @@ export default [
     information:
       "Send, Receive & Request money from your ApexPay Padi instantly and free of charge.",
   },
-  {
-    image: <Fifthstage />,
-    header: "Great to Have you!",
-    information:
-      "Let’s not keep you waiting! We promise to treat you like a boss that you are.",
-  },
 ];
+
+// {
+//   image: <Fifthstage />,
+//   header: "Great to Have you!",
+//   information:
+//     "Let’s not keep you waiting! We promise to treat you like a boss that you are.",
+// },

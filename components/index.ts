@@ -1,6 +1,5 @@
-import Onboardingstage from "./Onboardingstage/Onboardingstage"
-
+import Onboardingstage from "./Onboardingstage/Onboardingstage";
 
 export {
-    Onboardingstage
+    Onboardingstage,
 }

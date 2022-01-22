@@ -6,7 +6,7 @@ import { COLORS, FONTS, SIZES } from '../../constants';
 
 const Onboardingstage = ({item}: any) => {
   return (
-    <View style={{flex: 1, width: SIZES.width, justifyContent: 'center', alignItems: 'center'}}>
+    <View style={{flex: 1,width: SIZES.width, justifyContent: 'center', alignItems: 'center'}}>
       <View style={{marginBottom:58}}>
         {item.image}
       </View>

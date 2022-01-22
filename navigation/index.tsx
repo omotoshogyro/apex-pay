@@ -4,7 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { RootStackParamList } from "../types";
-import { Onboarding, Signin, Signup } from "../screens";
+import { Onboarding,Onboardingend, Signin, Signup } from "../screens";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -15,6 +15,7 @@ const RootNavigator = () => (
     }}
   >
     <Stack.Screen name="Onboarding" component={Onboarding} />
+    <Stack.Screen name="Onboardingend" component={Onboardingend} />
     <Stack.Screen name="Signup" component={Signup} />
     <Stack.Screen name="Signin" component={Signin} />
   </Stack.Navigator>

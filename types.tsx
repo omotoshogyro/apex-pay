@@ -16,6 +16,7 @@ declare global {
 
 export type RootStackParamList = {
   Onboarding: undefined;
+  Onboardingend: undefined;
   Signin: undefined;
   Signup: undefined;
 };
