@@ -4,7 +4,11 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { RootStackParamList } from "../types";
+<<<<<<< HEAD
 import { Onboarding, Signin, Signup, Home, Onboardingend, Transactions } from "../screens";
+=======
+import { Onboarding, Signin, Signup, Home, Onboardingend } from "../screens";
+>>>>>>> 7d444d28edf76f76ae2bb697668ccb9fa4c8269c
 import { Text } from "react-native-svg";
 import HomeIcon from "../assets/icons/Home";
 import WalletIcon from "../assets/icons/WalletIcon";
